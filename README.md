@@ -1,2 +1,0 @@
-# Brut
-BrutTestApplication
