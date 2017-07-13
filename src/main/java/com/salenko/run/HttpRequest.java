@@ -26,7 +26,7 @@ public class HttpRequest {
                 String responseString;
                 try {
                     responseString = EntityUtils.toString(response.getEntity(), "UTF-8");
-                    if (responseString.contains("503 Service Temporarily Unavailable") || responseString.contains("failed")) {
+                    if (responseString.contains("503 Service Temporarily Unavailable")) {
                         System.out.println("Re-send" + code);
                         reSends.add(code);
                     } else {
