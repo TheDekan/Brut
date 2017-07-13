@@ -42,12 +42,12 @@ public class HttpRequest {
 
             public void failed(final Exception ex) {
                 latch1.countDown();
-                System.out.println("failed");
+                reSends.add(code);
             }
 
             public void cancelled() {
                 latch1.countDown();
-                System.out.println("cancelled");
+                reSends.add(code);
             }
 
         });
